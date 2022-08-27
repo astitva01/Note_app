@@ -82,7 +82,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
             }).then((value) {
               print(value.id);
               Navigator.pop(context);
-            // ignore: avoid_print, invalid_return_type_for_catch_error
+              // ignore: avoid_print, invalid_return_type_for_catch_error
             }).catchError((error) => print("Failed to add data due to $error"));
           },
           child: const Icon(Icons.save),
