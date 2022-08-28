@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../style/app_style.dart';
 
+import 'package:intl/intl.dart';
+
 class NoteEditorScreen extends StatefulWidget {
   const NoteEditorScreen({Key? key}) : super(key: key);
 
@@ -14,7 +16,7 @@ class NoteEditorScreen extends StatefulWidget {
 
 class _NoteEditorScreenState extends State<NoteEditorScreen> {
   int color_id = Random().nextInt(AppStyle.cardsColor.length);
-  String date = DateTime.now().toString();
+  String date = DateFormat.yMMMd().format(DateTime.now());
   TextEditingController _titleController = TextEditingController();
   TextEditingController _contentController = TextEditingController();
   @override
